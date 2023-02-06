@@ -1,4 +1,4 @@
-import { UserAddress, UserGeo, UserGeoPreview } from "../../types";
+import { UserGeo } from "../../types";
 
 interface MapProps {
   userGeoInfo: UserGeo;

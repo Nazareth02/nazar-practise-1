@@ -24,4 +24,3 @@ export interface UserAddress {
   zipcode: string;
   geo: UserGeo;
 }
-export type UserGeoPreview = Pick<UserAddress, "geo">;

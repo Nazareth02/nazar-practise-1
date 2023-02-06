@@ -1,4 +1,4 @@
-import { UserAddress, UserGeo, UserGeoPreview } from "../../types";
+import { UserAddress } from "../../types";
 import { UserMap } from "../UserMap/UserMap";
 interface GeoProps {
   userAddress: Pick<UserAddress, "geo">;
