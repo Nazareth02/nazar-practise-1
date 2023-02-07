@@ -1,13 +1,13 @@
-import { UserAddress } from "../../types";
+import { UserAddress, UserGeo } from "../../types";
 import { UserMap } from "../UserMap/UserMap";
-interface GeoProps {
-  userAddress: Pick<UserAddress, "geo">;
+interface MainProps {
+  userLocation: UserGeo;
 }
-export const Main = ({ userAddress: { geo } }: GeoProps) => {
+export const Main = ({ userLocation }: MainProps) => {
   return (
     <div>
       <h3>Main:</h3>
-      <UserMap userGeoInfo={geo} />
+      <UserMap userGeoInfo={userLocation} />
     </div>
   );
 };

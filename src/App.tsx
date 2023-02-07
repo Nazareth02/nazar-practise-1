@@ -1,4 +1,3 @@
-import React from "react";
 import { User } from "./types";
 import { Header } from "./components/Header/Header";
 import { Aside } from "./components/Aside/Aside";
@@ -31,9 +30,18 @@ export const App = () => {
   };
   return (
     <div>
-      <Header name={user.name} userName={user.username} userEmail={user.email} />
-      <Main userAddress={user.address} />
-      <Aside userAddressInfo={user.address} />
+      <Header
+        userInfo={{ name: user.name, username: user.username, email: user.email }}
+      />
+      <Main userLocation={user.address.geo} />
+      <Aside
+        userAddressInfo={{
+          street: user.address.street,
+          suite: user.address.suite,
+          city: user.address.city,
+          zipcode: user.address.zipcode,
+        }}
+      />
       <Footer userCompanyInfo={user.company} />
     </div>
   );

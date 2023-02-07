@@ -1,7 +1,7 @@
 import { UserAddress } from "../../types";
 
 interface AsideProps {
-  userAddressInfo: UserAddress;
+  userAddressInfo: Omit<UserAddress, "geo">;
 }
 export const Aside = ({
   userAddressInfo: { street, suite, city, zipcode },
